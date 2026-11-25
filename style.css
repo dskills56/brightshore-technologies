@@ -1154,3 +1154,34 @@ p {
     transition: none;
   }
 }
+/* Real website screenshot portfolio cards */
+.portfolio-image-link { display: block; }
+.portfolio-image-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.portfolio-screenshot { padding: 0; background: #eaf0f7; position: relative; overflow: hidden; }
+.portfolio-screenshot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .25s ease; }
+.portfolio-image-link:hover img { transform: scale(1.025); }
+.portfolio-screenshot img[hidden] { display: none; }
+.screenshot-missing { width: 100%; padding: 24px; text-align: center; font-weight: 700; color: #344862; }
+.screenshot-missing[hidden] { display: none; }
+.screenshot-missing small { display: block; margin-top: 8px; font-size: 12px; font-weight: 400; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .portfolio-screenshot { height: 230px; } }
+
+/* Subtle agency partnership mention */
+.agency-partner-note { font-size: 14px !important; color: var(--muted); margin-top: 16px; }
+
+/* Three real-project portfolio cards */
+@media (min-width: 1001px) {
+  .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .portfolio-details { padding: 24px; }
+  .portfolio-details h3 { font-size: 21px; }
+}
+@media (min-width: 561px) and (max-width: 1000px) {
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.portfolio-card { display: flex; flex-direction: column; }
+.portfolio-image-link { display: block; }
+.portfolio-preview.portfolio-screenshot { padding: 0; height: auto; aspect-ratio: 16 / 10; background: #e8eef5; overflow: hidden; }
+.portfolio-preview.portfolio-screenshot img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; }
+.portfolio-details { display: flex; flex-direction: column; flex: 1; }
+.portfolio-details > a { margin-top: auto; padding-top: 16px; }
+.portfolio-image-link:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
